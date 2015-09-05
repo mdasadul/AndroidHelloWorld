@@ -49,6 +49,7 @@ public class MainActivity extends Activity {
 		secondNumber.setGravity(Gravity.CENTER_HORIZONTAL);
 
 		result.setGravity(Gravity.CENTER_HORIZONTAL);
+		layout.setGravity(Gravity.CENTER_HORIZONTAL);
 		
 		layout.addView(result);
 		setContentView(layout);
@@ -59,19 +60,16 @@ public class MainActivity extends Activity {
 		result.setLayoutParams(new LinearLayout.LayoutParams(200,80));
 	}
 
-	private  OnClickListener addNumbers = new OnClickListener()
-			{
+	private  OnClickListener addNumbers = new OnClickListener(){
 
 				@Override
 				public void onClick(View v) {
 					Double resultString = Double.parseDouble(firstNumber.getText().toString())+
 							Double.parseDouble(secondNumber.getText().toString());
-					result.setText(String.valueOf(resultString));
-					
-					
+					result.setText(String.valueOf(resultString));	
 				}
 	};
-	
+/*
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -89,5 +87,5 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}
+	}*/
 }
